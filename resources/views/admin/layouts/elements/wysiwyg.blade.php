@@ -2,7 +2,9 @@
     <script src="/assets/admin/bower_components/ckeditor/ckeditor.js"></script>
     <script>
         $(function () {
-            CKEDITOR.replace('{{ $name }}')
+            CKEDITOR.replace('{{ $name }}', {
+                filebrowserUploadUrl: "{{route('admin.image.editorupload',['_token' => csrf_token() ])}}"
+            })
         })
     </script>
 @endpush

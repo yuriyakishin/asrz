@@ -37,6 +37,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin' ,'middleware' => ['isAd
     Route::post('/profile','ProfileController@update')->name('admin.profile.update');
     Route::post('/image/upload','ImageController@upload')->name('admin.image.upload');
     Route::delete('image/remove/{uuid}','ImageController@remove')->name('admin.image.remove');
+    Route::post('/image/editorupload','ImageController@editorupload')->name('admin.image.editorupload');
     Route::resource('/job','JobController',['as' => 'admin']);
     Route::resource('/work','WorkController',['as' => 'admin']);
     Route::resource('/service','ServiceController',['as' => 'admin']);

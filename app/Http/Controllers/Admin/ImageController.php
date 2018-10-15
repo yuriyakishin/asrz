@@ -6,6 +6,7 @@ use App\Image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Intervention\Image\Facades\Image as ImageManager;
+use Illuminate\Support\Facades\Response;
 
 class ImageController extends Controller
 {
@@ -158,5 +159,24 @@ class ImageController extends Controller
             $result['error'] = $e->getMessage();
             return response(json_encode($result))->header('Content-Type', 'application/json');
         }
+    }
+    
+    public function editorupload(Request $request)
+    {
+        // Добавить картинку
+        $imageFile = $request->file('upload');
+        if(isset($imageFile))
+        {
+            $imageDir = 'images/uploads/images/'.date('Y-m-d').'/';
+            $image = $imageDir . $imageFile->getClientOriginalName();
+            $imageFile->move($imageDir,$imageFile->getClientOriginalName());
+            //
+            $result['url'] = '/'.$image;
+            $result['uploaded'] = '1';
+            $result['fileName'] = $imageFile->getClientOriginalName();
+            
+            return $result;
+        }
+        return 'error';
     }
 }

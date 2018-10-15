@@ -120,7 +120,7 @@
             @yield('h1','Административная панель управления')
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{{ route('admin') }}"><i class="fa fa-dashboard"></i> Главная</a></li>
+            <li><a href="{{ route('admin') }}"><i class="fa fa-home"></i> Главная</a></li>
             @section('breadcrumb')
             @show
         </ol>
