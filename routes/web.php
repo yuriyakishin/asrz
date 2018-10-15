@@ -42,6 +42,6 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin' ,'middleware' => ['isAd
     Route::resource('/service','ServiceController',['as' => 'admin']);
     Route::resource('/partner','PartnerController',['as' => 'admin']);
     Route::resource('/banner','BannerController',['as' => 'admin']);
-    Route::resource('/cmssetting','CmssettingController',['as' => 'admin']);    
+    Route::resource('/cmssetting','CmsSettingController',['as' => 'admin']);    
     Route::resource('/cmspage/{page}','CmsPageController',['as' => 'admin.cmspage']);
 });

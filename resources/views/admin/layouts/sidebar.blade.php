@@ -35,7 +35,7 @@
             <li @if (Route::current()->getName() == 'admin.job.index') class="active" @endif ><a href="{{ route('admin.job.index') }}"><i class="fa fa-angle-right"></i> Список вакансий</a></li>
         </ul>
     </li>
-    <li @if (Route::current()->getName() == 'admin.inform') class="active" @endif ><a href="{{ route('admin.cmspage.{page}.index',['page'=>'inform']) }}"><i class="fa fa-fw fa-newspaper-o"></i> <span>Полезная информация</span></a></li>
+    <li @if (isset(Route::current()->parameters()['page']) && Route::current()->parameters()['page'] == 'inform') class="active" @endif ><a href="{{ route('admin.cmspage.{page}.index',['page'=>'inform']) }}"><i class="fa fa-fw fa-newspaper-o"></i> <span>Полезная информация</span></a></li>
     <li @if (isset(Route::current()->parameters()['page']) && Route::current()->parameters()['page'] == 'contacts') class="active" @endif ><a href="{{ route('admin.cmspage.{page}.index',['page'=>'contacts']) }}"><i class="fa fa-fw fa-compass"></i> <span>Контактная информация</span></a></li>
     <li class="header">НАСТРОЙКИ</li>
     <li @if (Route::current()->getName() == 'admin.banner.index') class="active" @endif ><a href="{{ route('admin.banner.index') }}"><i class="fa fa-fw fa-image"></i> <span>Баннеры</span></a></li>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<base href="http://<? echo $_SERVER['HTTP_HOST']; ?>/" />
+<base href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/" />
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
