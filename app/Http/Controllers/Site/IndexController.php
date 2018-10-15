@@ -17,7 +17,7 @@ class IndexController extends Controller
             'banners' => \App\Banner::orderBy('sort')->get(),
             'servicesIndex' => \App\Service::orderBy('sort')->get(),
             'worksIndex' => \App\Work::orderBy('sort')->limit(10)->get(),
-            'meta' => \App\Meta::getMeta($page->id, 'home',
+            'meta' => \App\Meta::getMeta($page->id, 'home'),
         ]);
     }
 }
