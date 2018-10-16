@@ -17,6 +17,7 @@
 <meta name="msapplication-TileColor" content="#1e50c0">
 <meta name="msapplication-config" content="https://www.asrz.net/favicon/browserconfig.xml">
 <meta name="theme-color" content="#1e50c0">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css">
@@ -201,7 +202,6 @@ $('.carousel').bcSwipe({ threshold: 50 });
             </div>
             <div class="modal-body">
                 <form role="form">
-                    <input type="hidden" name="_token_callback" value="{{ csrf_token() }}" />
                     <div class="form-group">
                         <input type="name" name="callback-name" id="callback-name" class="form-control required" placeholder="Ваше имя">
                     </div>
@@ -231,7 +231,6 @@ $('.carousel').bcSwipe({ threshold: 50 });
             </div>
             <div class="modal-body">
                 <form role="form">
-                    <input type="hidden" name="_token_order" value="{{ csrf_token() }}" />
                     <div class="form-group">
                         <input type="firm" id="order-firm" class="form-control" placeholder="Название предприятия">
                     </div>
