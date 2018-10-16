@@ -13,7 +13,7 @@ class MailController extends Controller
     {
         $email = \App\CmsSetting::where('code','base')->first()->getValue()['email'];
                 
-        Mail::send('emails.callback', ['name' => $request->input('name'), 'phone' => $request->input('phone')], function($message)
+        Mail::send('emails.callback', ['name' => $request->input('name'), 'phone' => $request->input('phone')], function($message) use($email)
         {
             $message->to($email, 'Джон Смит')->subject('Привет!');
         });
