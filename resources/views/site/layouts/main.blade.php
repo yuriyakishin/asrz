@@ -246,7 +246,7 @@ $('.carousel').bcSwipe({ threshold: 50 });
                         <input type="mail" id="order-email" class="form-control"  placeholder="E-mail">
                     </div>
                     <div class="form-group">
-                        <textarea rows="4" id="order-text" class="form-control" placeholder="Сообщение"></textarea>
+                        <textarea rows="4" id="order-message" class="form-control" placeholder="Сообщение"></textarea>
                     </div>
                     <div class="form-group">
                         <p class="police">Нажимая кнопку <i>«Отправить»</i>, вы автоматически выражаете согласие на обработку своих персональных данных  и принимаете условия <a href="/politic">Пользовательского соглашения</a>.</p>

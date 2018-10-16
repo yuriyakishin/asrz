@@ -39,7 +39,7 @@ class MailController extends Controller
         
         $body .= "Должность: ".$request->input('prof')."<br />";
         $body .= "Email: ".$request->input('email')."<br />";
-        $body .= "Сообщение: ".$request->input('text')."<br />";
+        $body .= "Сообщение: ".$request->input('message')."<br />";
 
 	mail($email,"Заявка с сайта АСРЗ",$body,$headers);
         
