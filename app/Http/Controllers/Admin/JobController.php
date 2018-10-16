@@ -48,6 +48,7 @@ class JobController extends Controller
         $job->title = $request->title;
         $job->value = $request->value;
         $job->contacts = $request->contacts;
+        $job->sort = $request->sort;
         $job->save();
         \Session::flash('success_message','Информация сохранена');
         

@@ -26,6 +26,7 @@
                             <th>Заголовок</th>
                             <th>Описание</th>
                             <th>Контакты</th>
+                            <th>Сортировка</th>
                             <th></th>
                             <th></th>
 			</tr>
@@ -36,7 +37,8 @@
                                     <td>{{ $row->title }}</td>
                                     <td>{!! $row->value !!}</td>
                                     <td>{{ $row->contacts }}</td>
-                                    <td><a class="btn btn-info" href="{{ route('admin.job.edit',$row) }}"><i class="fa fa-edit bg"></i></a></td>
+                                    <td>{{ $row->sort }}</td>
+                                    <td><a class="btn btn-info" href="{{ route('admin.job.edit',$row) }}"><i class="fa fa-edit bg"></i></a></td>                                    
                                     <td class="text-right">
                                         <form action="{{ route('admin.job.destroy',$row) }}" onsubmit="if(confirm('Удалить')) { return true } else { return false }" method='POST'>
                                             {{ csrf_field() }}

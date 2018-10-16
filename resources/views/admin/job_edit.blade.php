@@ -27,6 +27,9 @@
                 <label>Контакты</label>
                 <input type="text" id="contacts" name="contacts" class="form-control" value="{{ $job->contacts ?? old('contacts')}}" />
             </div>
+            @component('admin.layouts.elements.text', ['id' => 'sort', 'name' => 'sort', 
+                'value' => (isset($job->sort) ? $job->sort : ''), 'label' => 'Сортировка'])
+            @endcomponent
             <div class="box-footer">
                 @component('admin.layouts.elements.buttons',['route_index' => 'admin.job.index'])
                 @endcomponent
