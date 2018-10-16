@@ -201,6 +201,7 @@ $('.carousel').bcSwipe({ threshold: 50 });
             </div>
             <div class="modal-body">
                 <form role="form">
+                    <input type="hidden" name="_token_callback" value="{{ csrf_token() }}" />
                     <div class="form-group">
                         <input type="name" name="callback-name" id="callback-name" class="form-control required" placeholder="Ваше имя">
                     </div>
@@ -230,6 +231,7 @@ $('.carousel').bcSwipe({ threshold: 50 });
             </div>
             <div class="modal-body">
                 <form role="form">
+                    <input type="hidden" name="_token_order" value="{{ csrf_token() }}" />
                     <div class="form-group">
                         <input type="firm" id="order-firm" class="form-control" placeholder="Название предприятия">
                     </div>
@@ -259,7 +261,6 @@ $('.carousel').bcSwipe({ threshold: 50 });
         </div>
     </div>
 </div>
-@csrf
 <!--//modal send-size-->
 </body>
 </html>
