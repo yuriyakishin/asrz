@@ -15,7 +15,7 @@ class MailController extends Controller
                 
         Mail::send('emails.callback', ['name' => $request->input('name'), 'phone' => $request->input('phone')], function($message)
         {
-            //$message->to($email, 'Джон Смит')->subject('Привет!');
+            $message->to($email, 'Джон Смит')->subject('Привет!');
         });
         
         return Response::json(['message' => 'Ваша заявка успешно отправлена']);

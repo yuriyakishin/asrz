@@ -10,10 +10,10 @@
                             <div class="row">
                                 <div class="col-xs-7">
                                     <div class="form-group">
-                                        <input type="phone" class="form-control" id="phon" placeholder="Телефон">
+                                        <input type="phone" class="form-control" id="callback2-phone" placeholder="Телефон">
                                     </div>
                                 </div>
-                                <div class="col-xs-5"> <a type="submit" class="btn font-cond">Отправить</a> </div>
+                                <div class="col-xs-5"> <a type="submit" class="btn font-cond" id="callback2-send">Отправить</a> </div>
                             </div>
                         </form>
                         <div class="phon-form">или позвоните по номеру <span>+7 (905) 176-85-16</span></div>
