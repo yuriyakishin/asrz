@@ -22,6 +22,7 @@ Route::group(['prefix' => '/','namespace' => 'Site'
     Route::get('/sertificat','SertificatController@index')->name('site.sertificat');
     Route::get('/contacts','ContactsController@index')->name('site.contacts');
     Route::get('/politic','PoliticController@index')->name('site.politic');
+    Route::get('/search','SearchController@index')->name('site.search');
     Route::post('/callback','MailController@callback')->name('site.callback');
     Route::post('/order','MailController@order')->name('site.order');
 });
