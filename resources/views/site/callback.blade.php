@@ -7,7 +7,6 @@
                     </div>
                     <div class="col-sm-7 col-xs-12">
                         <form>
-                            <input type="hidden" name="_token_callback2" value="{{ csrf_token() }}" />
                             <div class="row">
                                 <div class="col-xs-7">
                                     <div class="form-group">
