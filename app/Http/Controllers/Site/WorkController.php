@@ -16,7 +16,7 @@ class WorkController extends Controller
 
         return view('site.work',[
             'page' => $page->getValue(),
-            'works' => Work::orderBy('sort')->paginate(1) ,
+            'works' => Work::orderBy('sort')->paginate(12) ,
             'meta' => \App\Meta::getMeta($page->id, 'work')]);
     }
     
