@@ -69,8 +69,10 @@
                     <nav class="wsmenu clearfix">
                         <ul class="mobile-sub wsmenu-list">
                             <li class="rightmenu">
-                                <form class="topmenusearch">
-                                    <input placeholder="Поиск по сайту">
+                                <form action="/search" class="topmenusearch">
+                                    <input type="hidden" name="searchid" value="2331399">
+                                    <input type="hidden" name="l10n" value="ru">
+                                    <input name="text" placeholder="Поиск по сайту">
                                     <button class="btnstyle"><i class="searchicon fa fa-search" aria-hidden="true"></i></button>
                                 </form>
                             </li>
