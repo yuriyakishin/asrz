@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['prefix' => '/','namespace' => 'Site'
+Route::group(['prefix' => '/','namespace' => 'Site','middleware' => ['web']
 ], function() {
     Route::get('/','IndexController@index')->name('site.index');
     Route::get('/about','AboutController@index')->name('site.about');
