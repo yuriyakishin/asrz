@@ -33,11 +33,11 @@ class RouteServiceProvider extends ServiceProvider
                 $works = Work::all();
                 // роуты для сервисов
                 foreach($services as $service) {
-                    Route::get($service->uri,'ServiceController@index',['as' => $service->id])->name('site.service.'.$service->uri);
+                    Route::get($service->uri,'ServiceController@index',['as' => $service->id])->name('site.service.'.$service->uri)->middleware('web');
                 }
                 // роуты для наших работ
                 foreach($works as $work) {
-                    Route::get('work/'.$work->uri,'WorkController@one',['as' => $work->id])->name('site.work.'.$work->uri);
+                    Route::get('work/'.$work->uri,'WorkController@one',['as' => $work->id])->name('site.work.'.$work->uri)->middleware('web');
                 }
         });
         
