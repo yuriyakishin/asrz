@@ -12,22 +12,37 @@ class MailController extends Controller
     public function callback(Request $request)
     {
         $email = \App\CmsSetting::where('code','base')->first()->getValue()['email'];
-                
-        Mail::send('emails.callback', ['name' => $request->input('name'), 'phone' => $request->input('phone')], function($message) use($email)
-        {
-            $message->to($email, 'Джон Смит')->subject('Привет!');
-        });
+        $headers= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-type: text/html; charset=UTF-8\r\n";
+		
+	$body = "<h3>Заказ обратного звонка</h3>";
+	$body .= "Телефон: ".$request->input('phone')."<br />";
+	if($request->input('name') !== null) {
+            $body .= "Имя: ".$request->input('name')."<br />";
+        }
+
+	mail($email,"Заказ обратного звонка с сайта АСРЗ",$body,$headers);
         
         return Response::json(['message' => 'Ваша заявка успешно отправлена']);
     }
     
     public function order(Request $request)
     {
-        Mail::send('emails.callback', ['name' => $request->input('name'), 'phone' => $request->input('phone')], function($message)
-        {
-            //$message->to($email, 'Джон Смит')->subject('Привет!');
-        });
+        $email = \App\CmsSetting::where('code','base')->first()->getValue()['email'];
+        $headers= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-type: text/html; charset=UTF-8\r\n";
+		
+	$body = "<h3>Заявка с сайта АСРЗ</h3>";
+        $body .= "Фирма: ".$request->input('firm')."<br />";
+	$body .= "Телефон: ".$request->input('phone')."<br />";
+	$body .= "Имя: ".$request->input('name')."<br />";
         
-        return 'Ваша заявка успешно отправлена';
+        $body .= "Должность: ".$request->input('prof')."<br />";
+        $body .= "Email: ".$request->input('email')."<br />";
+        $body .= "Сообщение: ".$request->input('text')."<br />";
+
+	mail($email,"Заявка с сайта АСРЗ",$body,$headers);
+        
+        return Response::json(['message' => 'Ваша заявка успешно отправлена']);
     }
 }
