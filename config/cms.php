@@ -185,6 +185,11 @@ return [
                   'type' => 'text',
                   'label' => 'Контактрый email',
                 ],
+                [
+                  'id' => 'phone',
+                  'type' => 'text',
+                  'label' => 'Контактный телефон',
+                ],
             ],
         ],
     ],

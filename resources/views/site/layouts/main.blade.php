@@ -61,7 +61,7 @@
     <!--menu top-->
     <div class="wsmenucontainer clearfix">
         <div class="overlapblackbg"></div>
-        <div class="wsmobileheader clearfix"> <a id="wsnavtoggle" class="animated-arrow"><span></span></a> <a class="smallogo"><img src="img/logo.png" alt="" /></a> <a class="callusicon" href="tel:+79051768516"><span class="fa fa-phone"></span></a> </div>
+        <div class="wsmobileheader clearfix"> <a id="wsnavtoggle" class="animated-arrow"><span></span></a> <a class="smallogo"><img src="img/logo.png" alt="" /></a> <a class="callusicon" href="tel:{{ $blocks['phone'] }}"><span class="fa fa-phone"></span></a> </div>
         <div class="header">
             <div class="container-fluid top-menu">
 
