@@ -23,7 +23,7 @@ class MailController extends Controller
 
 	mail($email,"Заказ обратного звонка с сайта АСРЗ",$body,$headers);
         
-        return Response::json(['message' => 'Ваша заявка успешно отправлена']);
+        return Response::json(['message' => 'Ваша заявка успешно отправлена. Мы свяжемся с вами в течение 30 секунд.']);
     }
     
     public function order(Request $request)
@@ -43,6 +43,6 @@ class MailController extends Controller
 
 	mail($email,"Заявка с сайта АСРЗ",$body,$headers);
         
-        return Response::json(['message' => 'Ваша заявка успешно отправлена']);
+        return Response::json(['message' => 'Ваша заявка успешно отправлена. Мы свяжемся с вами в течение 30 секунд.']);
     }
 }
