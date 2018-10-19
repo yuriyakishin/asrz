@@ -15,7 +15,12 @@
                 'width'=>0,
                 'height'=>0,
                 'watermark'=>true
-    ]) }}" title="{{ $image->comment }}"><img src="{{ $MyImage->getImage(['id'=>$image->id,'full'=>false,'width'=>243,'height'=>0,'watermark'=>false]) }}" class="img-responsive" alt="{{ $image->comment }}"/></a></div>
+    ]) }}" title="{{ $image->comment }}"><img src="{{ $MyImage->getImage([
+    'id'=>$image->id,
+    'full'=>false,
+    'width'=>243,
+    'height'=>0,
+    'watermark'=>false]) }}" class="img-responsive" alt="{{ $image->comment }}"/></a></div>
     @endforeach
   </div>
 

@@ -75,7 +75,7 @@ class MyImage
                     $width = ($height * $widthOriginal) / $heightOriginal;
                 }
 
-                $image->fit($width, $height);
+                $image->resize($width, $height);
                 $image->save($pubImageAbsolutely, 100);
             }
         }
