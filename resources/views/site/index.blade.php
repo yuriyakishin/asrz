@@ -14,14 +14,17 @@
             @foreach($banners as $banner)
             <div class="item @if($loop->first) active @endif">
                 <div class="container-fluid" style="background-image: url(/{{ $banner->image }});">
-                    <div class="carousel-caption">
-                        <div class="slide-name">{{ $banner->title }}</div>
-                        <div class="clerarfix"></div>
-                        <div class="slide-info">
-                            <p>{{ $banner->value }}</p>
+                    <div class="container-fluid block">
+                        <div class="carousel-caption">
+                            <div class="slide-name">{{ $banner->title }}</div>
+                            <div class="clerarfix"></div>
+                            <div class="slide-info">
+                                <p>{{ $banner->value }}</p>
+                            </div>
+                            <div class="clerarfix"></div>
+                            <a href="{{ $banner->uri }}" class="btn-sp">подробнее...</a> 
                         </div>
-                        <div class="clerarfix"></div>
-                        <a href="{{ $banner->uri }}" class="btn-sp">подробнее...</a> </div>
+                    </div>
                 </div>
                 <div class="slide-bg"></div>
             </div>
