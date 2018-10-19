@@ -154,7 +154,10 @@
             </div>
             <div class="col-sm-4 right">
                 <p>&copy; {{ date('Y') }}. ООО АСРЗ</p>
-                {!! $blocks['bottom_text'] !!}                
+                {!! $blocks['bottom_text'] !!}
+                @if (Route::currentRouteName() == 'site.index')
+                <div class="rp">Сделано в <a href="https://www.rp-studio.net" target="_blank">RP-Studio</a></div>
+                @endif
             </div>
         </div>
     </div>
